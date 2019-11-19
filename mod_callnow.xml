@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8" client="site" method="upgrade">
+	<name>Call Now Button</name>
+	<creationDate>13.11.2019</creationDate>
+	<author>Ryan Behague</author>
+	<authorEmail>support@isonic.net.au</authorEmail>
+	<authorUrl>www.isonic.net.au</authorUrl>
+	<copyright>2019 All Rights Reserved</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>A call now module</description>
+
+	<files>
+		<filename module="mod_callnow">mod_callnow.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<filename>mod_callnow.xml</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="phone"
+					type="text"
+					label="Phone Number"
+					description="Phone Number"
+					hint="eg. 04511111111"
+				/>
+				<field
+					name="colour"
+					type="color"
+					label="Background Colour"
+					description="Main Colour"
+				/>
+				<field 
+					name="showondesktop" 
+					type="radio" 
+					default="0" 
+					label="Show On Desktop" 
+					description="" 
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field 
+					name="showontablet" 
+					type="radio" 
+					default="0" 
+					label="Show On Tablet" 
+					description="" 
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field 
+					name="showonmobile" 
+					type="radio" 
+					default="1" 
+					label="Show On Mobile" 
+					description="" 
+					class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
